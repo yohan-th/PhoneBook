@@ -20,12 +20,19 @@ class Zombie {
 
 	public:
 		Zombie(std::string name, std::string type="evil");
+		Zombie(std::string name);
+		Zombie(void);
 		~Zombie();
 
+		void	setName(std::string name);
+		void	setType(std::string type);
+		void	announce(void);
+
+	private:
 		std::string name;
 		std::string type;
 
-		void	announce(void);
+
 };
 
 #endif
