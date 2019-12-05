@@ -25,7 +25,7 @@ class Zombie {
 		std::string name;
 		std::string type;
 
-		void	announce(std::string name, std::string type);
+		void	announce(void);
 };
 
 #endif

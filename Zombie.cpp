@@ -17,15 +17,12 @@ Zombie::Zombie(std::string name, std::string type)
 {
 	this->name = name;
 	this->type = type;
-	this->announce(name, type);
+	//this->announce(name, type);
 }
 
-Zombie::~Zombie(void)
-{
-	std::cout << "Luckely all zombies are dead now !" << std::endl;
-}
+Zombie::~Zombie(void) {}
 
-void Zombie::announce(std::string name, std::string type)
+void Zombie::announce(void)
 {
-	std::cout << "<" << name << " (" << type << ")> Brraiiiinnnsss..." << std::endl;
+	std::cout << "<" << this->name << " (" << this->type << ")> Brraiiiinnnsss..." << std::endl;
 }

@@ -15,11 +15,24 @@
 
 int     main(void)
 {
-	Zombie zombie1("bob", "evil");
+	Zombie zombie1("yohan", "evil");
+	zombie1.announce();
 
 	ZombieEvent events = ZombieEvent();
+	events.saveZombieType("evil");
+	std::string names[5] = {"Bob", "Tim", "Jul", "Pet", "Kat"};
+	Zombie *zombie2;
+	Zombie *zombie3;
+	srand (time(NULL));
+	zombie2 = events.randomChump(names[rand() % 4]);
+	zombie3 = events.randomChump(names[rand() % 4]);
+	zombie2->announce();
+	zombie3->announce();
 
 	events.setZombieType(&zombie1, "good");
+	zombie1.announce();
 
+	delete zombie2;
+	delete zombie3;
     return (1);
 }
